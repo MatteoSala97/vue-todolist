@@ -37,14 +37,18 @@
             </button>
         </div>
         <div class="mt-5">
-            <div id="todo-container"
+            <div 
+            id="todo-container"
             v-for="(todo, index) in toDos" :key="index"
             class="border-bottom d-flex align-items-baseline justify-content-between">
-                <p class="mx-4">{{todo.text}}</p>
+                <p 
+                :class="{'done': todo.done}"
+                @click="lineThrough(index)"
+                class="mx-4">{{todo.text}}</p>
                 <span>
                     <i 
                     @click="removeTask(index)"
-                    class="fa-solid fa-xmark text-danger p-3">
+                    class="fa-solid fa-xmark text-danger p-3 ">
                 </i>
                 </span>
             </div>

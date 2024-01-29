@@ -45,5 +45,8 @@ createApp({
         removeTask(index){
             this.toDos.splice(index, 1)
         },
+        lineThrough(index){
+            this.toDos[index].done = !this.toDos[index].done
+        }
     }
 }).mount("#app")
