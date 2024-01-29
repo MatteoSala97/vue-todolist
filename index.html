@@ -28,7 +28,8 @@
             id="task"
             aria-describedby="new task"
             placeholder="Add a new task to the list..."
-            v-model="newTask">
+            v-model="newTask"
+            @keyUp.enter="addTask">
 
             <button
             @click="addTask"
