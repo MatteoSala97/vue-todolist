@@ -8,3 +8,13 @@
 .fa-xmark{
     cursor: pointer;
 }
+
+.fa-xmark:hover{
+    transform: scale(1.5);
+}
+
+#todo-container:hover{
+    background-color: #505050;
+    border-radius: 10px;
+}
+
