@@ -29,11 +29,17 @@
             aria-describedby="new task"
             placeholder="Add a new task to the list..."
             v-model="newTask">
-            <button class="btn btn-dark border">Add</button>
+
+            <button
+            class="btn btn-dark border">
+            Add
+            </button>
         </div>
         <div class="mt-5">
-            <div class="border-bottom d-flex align-items-baseline justify-content-between">
-                <p>Here goes the task</p>
+            <div 
+            v-for="(todo, index) in toDos" :key="index"
+            class="border-bottom d-flex align-items-baseline justify-content-between">
+                <p>{{todo.text}}</p>
                 <span>
                     <i 
                     @click=""

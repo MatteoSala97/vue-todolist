@@ -32,9 +32,13 @@ createApp({
         }
     },
     created(){
-
     },
     methods:{
+        addTask(){
 
+        },
+        removeTask(){
+
+        },
     }
 }).mount("#app")
