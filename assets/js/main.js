@@ -35,10 +35,10 @@ createApp({
     },
     methods:{
         addTask(){
-
+            
         },
-        removeTask(){
-
+        removeTask(index){
+            this.toDos.splice(index, 1)
         },
     }
 }).mount("#app")
