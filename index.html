@@ -31,6 +31,7 @@
             v-model="newTask">
 
             <button
+            @click="addTask"
             class="btn btn-dark border">
             Add
             </button>
@@ -42,7 +43,7 @@
                 <p class="mx-4">{{todo.text}}</p>
                 <span>
                     <i 
-                    @click="removeTask"
+                    @click="removeTask(index)"
                     class="fa-solid fa-xmark text-danger p-3">
                 </i>
                 </span>

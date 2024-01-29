@@ -35,7 +35,12 @@ createApp({
     },
     methods:{
         addTask(){
-            
+            if (this.newTask.trim()!== ""){
+                this.toDos.push({
+                    text: this.newTask, done: false,
+                })
+                this.newTask = ""
+            }
         },
         removeTask(index){
             this.toDos.splice(index, 1)
