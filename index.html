@@ -38,9 +38,15 @@
             </button>
         </div>
         <div class="mt-5">
+            <div v-if="!hasTasks" class="text-center">
+                <p>You have nothing else to do.</p>
+            </div>
+            
             <div 
-            id="todo-container"
-            v-for="(todo, index) in toDos" :key="index"
+            v-else 
+            id="todo-container" 
+            v-for="(todo, index) in toDos" 
+            :key="index"
             class="border-bottom d-flex align-items-baseline justify-content-between">
                 <p 
                 :class="{'done': todo.done}"

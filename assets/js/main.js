@@ -31,7 +31,10 @@ createApp({
             ]
         }
     },
-    created(){
+    computed:{
+        hasTasks() {
+            return this.toDos.length > 0
+        }
     },
     methods:{
         addTask(){
